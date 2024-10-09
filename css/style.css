@@ -1,13 +1,63 @@
 /********** Template CSS **********/
 :root {
-    --primary: #ee8e29;
+    --primary: #e17f16;
     --secondary: #f1b443;
     --light: #F0F6FF;
     --dark: #262B47;
     --orange: #FF9800; /* Thêm biến màu cam */
 }
 
-
+.promotion-list {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+.promotion-title {
+    font-size: 2rem;
+    color: #ff8c00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.promotion-item {
+    border: 1px solid #ff8c00;
+    border-radius: 8px;
+    border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        width: 300px; /* Chiều rộng của mỗi mục khuyến mại */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1;
+}
+.promotion-item:hover {
+    transform: scale(1.05);
+}
+.btn-details {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.btn-details:hover {
+    background-color: #e07b00;
+}
+.promotion-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.promotion-icon {
+    font-size: 1.5rem;
+    color: #ff8c00;
+    margin-right: 10px;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -258,10 +308,10 @@ h6,
 }
 
 
-/*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
-    padding: 16rem 0 0 0;
+    margin-top: 2rem; 
+    padding: 12rem 0 0 0; /* Giảm padding trên để dịch lên */
     background:
         url(../img/bg-circle.png),
         url(../img/bg-triangle.png),
@@ -272,6 +322,8 @@ h6,
         right 0px top 50%,
         center bottom;
     background-repeat: no-repeat;
+    max-width: 100%; 
+    height: auto; /* Giữ tỉ lệ khung hình */
 }
 
 @media (max-width: 991.98px) {
@@ -279,7 +331,6 @@ h6,
         padding: 6rem 0 9rem 0;
     }
 }
-
 
 /*** Feature ***/
 .feature-item {
@@ -315,6 +366,47 @@ h6,
 .pricing .nav-link.active {
     color: #FFFFFF;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.text-primary-gradient {
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff8c00, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+.fw-medium {
+    font-weight: 500;
+}
+.list-unstyled {
+    padding-left: 0;
+}
+.mb-4 {
+    margin-bottom: 2rem;
+}
+.fa-4x {
+    font-size: 3rem;
+    color: #ff8c00; /* Màu cam đậm hơn */
+}
+.text-warning {
+    color: #ff8c00; /* Màu cam đậm hơn */
+}
+.text-center {
+    text-align: center;
+}
+.feature-item {
+    border: 1px solid #ff8c00;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+.feature-item:hover {
+    transform: scale(1.05);
 }
 
 
