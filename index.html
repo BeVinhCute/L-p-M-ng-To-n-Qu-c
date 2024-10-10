@@ -4,13 +4,7 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFTX047ZJ0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EFTX047ZJ0');
-</script>
+<script defer data-domain="bevinhcute.github.io/FYuNrp" src="https://api.publytics.net/js/script.manual.min.js"></script> <script> window.publytics = window.publytics || function() { (window.publytics.q = window.publytics.q || []).push(đối_số) }; publytics('lượt xem trang'); </script>
 
     <!-- Favicon -->
     <link href="img/icon fpt.png" rel="icon">
@@ -94,6 +88,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="promotion-list">
     <h2 class="promotion-title">Khuyến Mại Tại FPT Telecom</h2>
     <div class="promotion-container">
@@ -119,6 +115,84 @@
         </div>
     </div>
 </div>
+
+
+<div class="news-section">
+    <h2 class="news-title" >Tin Tức Mới Nhất Từ FPT Telecom</h2>
+    <div class="news-container" id="news-content">
+        <!-- Nội dung tin tức sẽ được tải ở đây -->
+    </div>
+    <div class="pagination">
+        <a href="#" class="active" onclick="loadNews(1); return false;">1</a>
+        <a href="#" onclick="loadNews(2); return false;">2</a>
+        <a href="#" onclick="loadNews(3); return false;">3</a>
+        <a href="#" onclick="loadNews('next'); return false;">>>></a>
+    </div>
+</div>
+
+<script>
+    function loadNews(page) {
+        // Giả lập tải nội dung mới từ server
+        const newsContent = {
+            1: `
+                <div class="news-item">
+                    <img src="img/dichvu.png" alt="Tin tức 1">
+                    <h5><a href="#" class="text-dark">FPT Telecom - Nhà Cung Cấp Dịch Vụ Viễn Thông Hàng Đầu Việt Nam</a></h5>
+                    <p>Tìm hiểu về FPT Telecom, nhà cung cấp dịch vụ viễn thông hàng đầu tại Việt Nam với các sản phẩm và dịch vụ internet cáp quang, truyền hình và giải pháp công nghệ tiên tiến.</p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+                <div class="news-item">
+                    <img src="img/flag sale.png" alt="">
+                    <h5><a href="#" class="text-dark">Flash Sale 10/10: Giảm 50% - gói ứng dụng bảo mật F-Safe Go 3 thiết bị - trên Hi FPT</a></h5>
+                    <p>Từ ngày 10-12/10, FPT Telecom mang đến chương trình Flash Sale GIẢM NGAY 50% gói ứng dụng bảo mật F-Safe Go cho 3 thiết bị trên ứng dụng Hi FPT. </p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+            `,
+            2: `
+                <div class="news-item">
+                    <img src="img/wifi6.jpg" alt="Tin tức 3">
+                    <h5><a href="#" class="text-dark">Tìm hiểu về WiFi 6: Công nghệ mạng không dây thế hệ mới</a></h5>
+                    <p>WiFi 6 là một công nghệ mạng không dây tiên tiến mang đến trải nghiệm kết nối nhanh chóng, ổn định và hiệu quả hơn so với các phiên bản trước. Được phát triển bởi IEEE với tên gọi kỹ thuật là 802.11ax, WiFi 6 đang nhanh chóng trở thành lựa chọn phổ biến nhờ khả năng cải thiện tốc độ, tăng cường dung lượng và hiệu quả năng lượng, đồng thời giảm thiểu nhiễu trong môi trường đông đúc.</p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+                <div class="news-item">
+                    <img src="img/news4.jpg" alt="Tin tức 4">
+                    <h5><a href="#" class="text-dark">Tiêu Đề Bài Viết 4</a></h5>
+                    <p>Mô tả ngắn gọn về nội dung bài viết 4.</p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+            `,
+            3: `
+                <div class="news-item">
+                    <img src="img/news5.jpg" alt="Tin tức 5">
+                    <h5><a href="#" class="text-dark">Tiêu Đề Bài Viết 5</a></h5>
+                    <p>Mô tả ngắn gọn về nội dung bài viết 5.</p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+                <div class="news-item">
+                    <img src="img/news6.jpg" alt="Tin tức 6">
+                    <h5><a href="#" class="text-dark">Tiêu Đề Bài Viết 6</a></h5>
+                    <p>Mô tả ngắn gọn về nội dung bài viết 6.</p>
+                    <a href="#" class="btn-read-more">Đọc Thêm</a>
+                </div>
+            `
+        };
+
+        // Cập nhật nội dung tin tức
+        document.getElementById('news-content').innerHTML = newsContent[page] || '';
+        
+        // Cập nhật trạng thái phân trang
+        document.querySelectorAll('.pagination a').forEach(link => {
+            link.classList.remove('active');
+        });
+        document.querySelector(`.pagination a:nth-child(${page})`).classList.add('active');
+    }
+
+    // Tải nội dung trang đầu tiên khi trang được tải
+    window.onload = function() {
+        loadNews(1);
+    };
+</script>
 
         <!-- About Start -->
 <div class="container-xxl py-5" id="about">
@@ -305,6 +379,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <div class="bg-light rounded">
+                                    <div class="border-bottom p-4 mb-4">
+                                        <h4 class="text-primary-gradient mb-1">Meta</h4>
+                                        <span>Modem wifi 6</span>
+                                    </div>
+                                    <div class="p-4 pt-0">
+                                        <h1 class="mb-3">
+                                            <small class="align-top" style="font-size: 22px; line-height: 45px;">₫</small>330.000<small
+                                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Tháng</small>
+                                        </h1>
+                                        <div class="d-flex justify-content-between mb-3"><span>Tải xuống: 1 Gbps</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <div class="d-flex justify-content-between mb-3"><span>Tải lên: 1 Gbps</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                        <a href="https://shop.fpt.vn/internet" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Bắt đầu ngay</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade p-0">
                             <div class="row g-4">
@@ -355,6 +446,23 @@
                                             </h1>
                                             <div class="d-flex justify-content-between mb-3"><span>Tải xuống: 1 Gb</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <div class="d-flex justify-content-between mb-3"><span>Tải lên: 150 Mbps</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="https://shop.fpt.vn/internet" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Bắt đầu ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Meta</h4>
+                                            <span>Modem wifi 6</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top" style="font-size: 22px; line-height: 45px;">₫</small>3.960.000<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ năm</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Tải xuống: 1 Gbps</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Tải lên: 1 Gbps</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="https://shop.fpt.vn/internet" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Bắt đầu ngay</a>
                                         </div>
                                     </div>
