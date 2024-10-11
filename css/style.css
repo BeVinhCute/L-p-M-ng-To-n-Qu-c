@@ -7,6 +7,28 @@
     --orange: #FF9800; /* Thêm biến màu cam */
 }
 
+/* CSS cho biểu tượng Zalo */
+.zalo-button {
+    position: fixed;
+    bottom: 100px; /* Khoảng cách từ đáy */
+    right: 40px; /* Khoảng cách từ bên phải */
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background-color: #f4fcf7; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
+}
+
+.zalo-button img {
+    width: 80%; 
+    height: auto; 
+}
+
+
 .promotion-list {
     background-color: #f9f9f9;
     padding: 40px 20px;
@@ -14,7 +36,7 @@
     margin: 40px 0;
 }
 .promotion-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ff8c00;
     font-weight: bold;
     text-align: center;
