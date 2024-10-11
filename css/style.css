@@ -374,6 +374,21 @@ h6,
     }
 }
 
+.row.g-5.align-items-center {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: stretch; /* Đảm bảo chiều cao bằng nhau */
+}
+
+.col-lg-8, .col-lg-4 {
+    flex: 1; /* Đảm bảo cả hai cột chiếm đều chiều rộng */
+}
+
+.hero-image {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của cột */
+    height: auto; /* Giữ tỷ lệ khung hình */
+}
+
+
 
 .hero-header {
     margin-bottom: 6rem;
@@ -434,6 +449,8 @@ h6,
     color: #FFFFFF;
     background: linear-gradient(to bottom right, var(--primary), var(--secondary));
 }
+
+
 
 .container {
     max-width: 1200px;
